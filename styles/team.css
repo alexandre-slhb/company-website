@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+
+@media (max-width: 1920px) {
+    .grid {
+      width: 1900px;
+    }
+  }
+  @media (max-width: 720px) {
+    .grid {
+      width: 600;
+    }
+  }
+  @media (max-width: 540px) {
+    .grid {
+      width: 400;
+    }
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    font-family: "Montserrat";
+    background: #282828;
+    overflow: hidden;
+}
+
+.companyname {
+    color: #fff;
+    margin: 0%;
+    font-size: 40px;
+    font-family: Merienda;
+    font-weight: 700;
+    background: linear-gradient(#ffc267, #ff7e67);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip:"";
+}
+
+
+
+/* Menu cards */
+
+.nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav__item {
+    margin: 0 15px;
+}
+
+.nav__link {
+    display: flex;
+    font-weight: 500;
+    font-size: 30px;
+    color: #666;
+    position: relative;
+    padding: 5px 0;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.nav__link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 50%;
+    height: 2px;
+    background: #fff;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav__link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 50%;
+    height: 2px;
+    background: #fff;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav__link:hover {
+    color: #fff;
+}
+
+.nav__link:hover:before {
+   right: 0;
+}
+
+.nav__link:hover:after {
+    left: 0;
+ }
+
+/* Spacer */
+
+.spacer {
+    height: 30px;
+}
+
+/* Team cards */
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.container:before {
+    content:"";
+    position: absolute;
+    bottom: -300px;
+    left: -300px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #a46200 11%, #e4ab0f 51%, #e4cf0f 92%);
+    z-index: -1;
+}
+
+.container::after {
+    content:"";
+    position: absolute;
+    top: -280px;
+    right: -280px;
+    width: 425px;
+    height: 425px;
+    border-radius: 50%;
+    background: linear-gradient(213deg, #bdff67 14%, #67ffc0 81%, #67FFFF 162%);
+    z-index: -1;
+}
+
+.card {
+    background: linear-gradient(152deg, rgba(255,255,255,.4) -50%, rgba(255,255,255,0) 125%);
+    border: 1px solid rgba(255,255,255,.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    padding: 50px 25px;
+    position: relative;
+    z-index: 1;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s;
+}
+
+.card__img {
+    display: inline-flex;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.card__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__content {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card__name {
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.card__text {
+    line-height: 1.2;
+    font-size: 14px;
+    color: #fff;
+}
+
+.card-soc__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-soc__item {
+    margin: 0 7.5px;
+}
+
+.card-soc__link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(152deg, rgba(255,255,255,.4) -50%, rgba(255,255,255,0) 125%);
+    border: 1px solid rgba(255,255,255,.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+
+@media (max-width: 1920px) {
+    .grid {
+      width: 1900px;
+    }
+  }
+  @media (max-width: 720px) {
+    .grid {
+      width: 600;
+    }
+  }
+  @media (max-width: 540px) {
+    .grid {
+      width: 400;
+    }
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Montserrat;
+    background: #282828;
+}
+
+.companyname {
+    color: #fff;
+    margin: 0%;
+    font-size: 40px;
+    font-family: Merienda;
+    font-weight: 700;
+    background: linear-gradient(#ffc267, #ff7e67);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip:"";
+}
+
+/* Menu cards */
+
+.nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav__item {
+    margin: 0 15px;
+}
+
+.nav__link {
+    display: flex;
+    font-weight: 500;
+    font-size: 30px;
+    color: #666;
+    position: relative;
+    padding: 5px 0;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.nav__link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 50%;
+    height: 2px;
+    background: #fff;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav__link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 50%;
+    height: 2px;
+    background: #fff;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav__link:hover {
+    color: #fff;
+}
+
+.nav__link:hover:before {
+   right: 0;
+}
+
+.nav__link:hover:after {
+    left: 0;
+ }
+
+/* Spacer */
+
+.spacer {
+    height: 30px;
+}
+
+/* Pricing cards */
+
+.grid {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    margin: 0 -20px;
+    position: relative;
+    z-index: 1;
+}
+
+.col {
+    padding: 0 20px;
+    width: 33.333334%;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background: linear-gradient(150deg, rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 100%);
+    border: 1px solid rgba(255, 255, 255, .4);
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.card__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+}
+
+.card__title {
+    font-weight: normal;
+    font-size: 32px;
+    color: #fff; 
+}
+
+.card__price {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+}
+
+.card__amount {
+    font-weight: normal;
+    font-size: 18px;
+    color: #fff;
+}
+
+.card__amount span {
+    font-size: 36px;
+}
+
+.card__body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.card__item {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card__item span {
+    font-weight: 600;
+}
+
+.card__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: linear-gradient(150deg, rgba(255,255,255,3) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 25px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.grid:after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    z-index: -1;
+    background: linear-gradient(150deg, #fffc67 0%, #ffc267 48%, #ff7e67 100%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.grid:before {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    z-index: -1;
+    background: linear-gradient(150deg, #bdff67 0%, #67ffc0 58%, #67FFFF 100%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
