@@ -209,3 +209,7 @@ body {
 .card:hover .card__content:after {
     border-width: 0 0 35px 350px;
 }
+
+.rfi {
+    margin: 40px auto;
+}
